@@ -7,13 +7,13 @@ const NewsHeadlinesComponent = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchHeadlines = async () => {
-    const apiKey = "d92dc64482ad416fa44f8972657d0719";
+    const apiKey = "lKPiFHNE9T5OK7ujkr3OdMmkF6BwUrQ3kQMxkJh9";
     const country = "in"; // Country code should be in lower case
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}&pageSize=5`;
+    const url = `https://api.thenewsapi.com/v1/news/top?api_token=${apiKey}&locale=${country}&limit=10`;
 
     try {
       const response = await axios.get(url);
-      setHeadlines(response.data.articles);
+      setHeadlines(response.data.data);
     } catch (error) {
       console.error("Error fetching headlines:", error);
       alert("Error fetching headlines. Please try again later.");
@@ -38,8 +38,8 @@ const NewsHeadlinesComponent = () => {
               <li key={index}>
                 
                   <h3>{headline.title}</h3>
-                  <p>{headline.source.name}</p>
-                  <p>{new Date(headline.publishedAt).toLocaleString()}</p>
+                  <p>{headline.source}</p>
+                  <p>{new Date(headline.published_at).toLocaleString()}</p>
                   <a
                   href={headline.url}
                   target="_blank"
