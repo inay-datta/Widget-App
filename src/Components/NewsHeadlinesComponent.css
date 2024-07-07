@@ -1,0 +1,70 @@
+/* App.css or NewsHeadlinesComponent.css */
+
+/* Styling for the news widget container */
+.news-widget {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the headline list */
+  .news-widget h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .news-widget ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .news-widget li {
+    background-color: #fff;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .news-widget li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for individual headlines */
+  .news-widget h3 {
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: #333;
+  }
+  
+  .news-widget p {
+    margin: 4px 0;
+    color: #555;
+  }
+  
+  /* Styling for the link */
+  .news-widget a {
+    display: block;
+    margin-top: 8px;
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .news-widget a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Loading text styling */
+  .news-widget p:last-of-type {
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+  }
+  
