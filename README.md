@@ -19,7 +19,7 @@ This project is a simple React application built with Vite that allows users to 
 
 Used NETLIFY for continuous deployment
 
-Deployed site : [a https://serene-babka-98cee7.netlify.app/](https://serene-babka-98cee7.netlify.app/) 
+Deployed site : [https://serene-babka-98cee7.netlify.app/](https://serene-babka-98cee7.netlify.app/) 
 
 ## Getting Started
 
