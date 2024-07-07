@@ -15,7 +15,7 @@ This project is a simple React application built with Vite that allows users to 
 - **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
 - **Axios**: A promise-based HTTP client for the browser and Node.js.
 
-### Deployment
+## Deployment
 
 Used NETLIFY for continuous deployment
 
