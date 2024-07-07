@@ -5,7 +5,7 @@ This project is a simple React application built with Vite that allows users to 
 ## Features
 
 - **Weather Widget**: Displays current weather information as per user's city input.
-- **News Headlines Widget**: Displays top headlines from the News API.
+- **News Headlines Widget**: Displays top headlines from the News API. Note: Used API endpoint allows only 3 headlines when a GET request is fired.
 - **Responsive Design**: Adapts to different screen sizes.
 - **Error Handling**: Alerts the user if there is an error fetching the data.
 
