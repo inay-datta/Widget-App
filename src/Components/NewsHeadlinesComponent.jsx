@@ -40,13 +40,16 @@ const NewsHeadlinesComponent = () => {
                   <h3>{headline.title}</h3>
                   <p>{headline.source}</p>
                   <p>{new Date(headline.published_at).toLocaleString()}</p>
+                <div className="openLink">
                   <a
                   href={headline.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                {headline.url}
+                Read more
+                <img className="linkIcon" src="../assets/link-open-icon.png" width="20px" height="20px" margin="5px"></img>
                 </a>
+                </div>
               </li>
             ))
           ) : (
