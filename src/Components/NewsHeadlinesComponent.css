@@ -1,13 +1,38 @@
-/* App.css or NewsHeadlinesComponent.css */
-
-/* Styling for the news widget container */
-.news-widget {
+:root {
+    --background-color: #f9f9f9;
+    --card-background-color: #fff;
+    --text-color: #333;
+    --subtext-color: #555;
+    --link-color: #1e90ff;
+    --link-hover-color: #1e90ff;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-box-shadow-color: rgba(0, 0, 0, 0.2);
+    --loading-text-color: #999;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #333;
+      --card-background-color: #444;
+      --text-color: #fff;
+      --subtext-color: #aaa;
+      --link-color: #1e90ff;
+      --link-hover-color: #1e90ff;
+      --box-shadow-color: rgba(0, 0, 0, 0.3);
+      --hover-box-shadow-color: rgba(0, 0, 0, 0.5);
+      --loading-text-color: #ccc;
+    }
+  }
+  
+  /* Styling for the news widget container */
+  .news-widget {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    color: var(--text-color);
   }
   
   /* Styling for the headline list */
@@ -15,6 +40,7 @@
     font-size: 24px;
     margin-bottom: 16px;
     text-align: center;
+    color: var(--text-color);
   }
   
   .news-widget ul {
@@ -23,48 +49,49 @@
   }
   
   .news-widget li {
-    background-color: #fff;
+    background-color: var(--card-background-color);
     margin-bottom: 16px;
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
     transition: transform 0.2s, box-shadow 0.2s;
   }
   
   .news-widget li:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--hover-box-shadow-color);
   }
   
   /* Styling for individual headlines */
   .news-widget h3 {
     font-size: 20px;
     margin: 0 0 8px;
-    color: #333;
+    color: var(--text-color);
   }
   
   .news-widget p {
     margin: 4px 0;
-    color: #555;
+    color: var(--subtext-color);
   }
   
   /* Styling for the link */
   .news-widget a {
     display: block;
     margin-top: 8px;
-    color: #1e90ff;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
   }
   
   .news-widget a:hover {
     text-decoration: underline;
+    color: var(--link-hover-color);
   }
   
   /* Loading text styling */
   .news-widget p:last-of-type {
     text-align: center;
-    color: #999;
+    color: var(--loading-text-color);
     margin-top: 20px;
   }
   

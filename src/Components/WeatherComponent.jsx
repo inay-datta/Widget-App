@@ -50,7 +50,7 @@ const WeatherComponent = () => {
       <p id="temperature">{temperature} °C</p>
       <p id="condition">{condition}</p>
 
-      <input type="text" id="city-input" />
+      <input type="text" id="city-input" placeholder="Enter city name"/>
       <button type="submit" onClick={updateCity}>
         <span>Update</span> City
       </button>

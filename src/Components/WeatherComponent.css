@@ -1,51 +1,71 @@
-/* App.css */
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #000;
+  --border-color: #ccc;
+  --button-background-color: #007bff;
+  --button-text-color: white;
+  --button-hover-background-color: #0056b3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --text-color: #fff;
+    --border-color: #444;
+    --button-background-color: #0056b3;
+    --button-text-color: white;
+    --button-hover-background-color: #007bff;
+  }
+}
 
 #weather-widget {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #city-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-  }
-  
-  button[type='submit'] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  button[type='submit']:hover {
-    background-color: #0056b3;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-top: 20px;
-  }
-  
-  #weather-icon {
-    margin-top: 10px;
-  }
-  
-  #temperature,
-  #condition {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-  
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+#city-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button[type='submit'] {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type='submit']:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#weather-icon {
+  margin-top: 10px;
+}
+
+#temperature,
+#condition {
+  font-size: 18px;
+  margin-top: 10px;
+}
