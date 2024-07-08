@@ -17,7 +17,7 @@ const WeatherComponent = () => {
         );
         setWeatherData(response.data);
       } catch (error) {
-        alert("Failed to fetch weather data. Please try again.");
+        alert("please enter valid city name.");
       }
     };
 
