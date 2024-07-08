@@ -17,12 +17,32 @@ const WeatherComponent = () => {
         );
         setWeatherData(response.data);
       } catch (error) {
-        alert("please enter valid city name.");
+
+        const cityValue = city.trim();
+        console.log("inside catch block ", error)
+        console.log(cityValue)
+        console.log(typeof cityValue);
+
+        document.getElementById("city-input").value="";
+
+        if (cityValue === '') {
+          alert('City name cannot be empty.');
+          return;
+        }
+  
+       else if (!/^[A-Z][a-zA-Z]*$/.test(cityValue)) {
+          alert('City name must start with a capital letter and contain only letters without spaces.');
+          
+        }
+        else{
+          alert('server error');
+        }
       }
     };
 
+
     fetchWeather();
-  }, [apiKey, city]);
+  }, [apiKey,city]);
 
   function updateCity() {
     console.log(document.getElementById("city-input").value, " inner text");

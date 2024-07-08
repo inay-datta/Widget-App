@@ -19,6 +19,7 @@ const NewsHeadlinesComponent = () => {
       alert("Error fetching headlines. Please try again later.");
     } finally {
       setLoading(false);
+      alert('Note: The News API endpoint used provides 3 headlines only.');
     }
   };
 
